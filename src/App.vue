@@ -1,36 +1,27 @@
 <template>
-  <button @click="getPerson">click me to get Person component</button>
-  <button @click="changeA">click me to change Person's a</button>
-  <button @click="changeC">click me to change Person's c</button>
-  <button @click="getEle">click me to get Person's friday</button>
-
-  <Person ref="person"/>
+  <Person a="haha"/>
 </template>
 
 <script lang="ts" setup>
 import  Person  from './components/Person.vue'
-import { ref } from 'vue'
 
-let person = ref()
+import { reactive } from 'vue'
 
-function getPerson() {
-  console.log(person.value)
+interface PersonInter {
+  id: string,
+  name: string,
+  age: number,
 }
 
-function changeA(){
-  person.value.a++
-}
+type Persons = Array<PersonInter>
 
-function changeC(){
-  person.value.c++
-}
-
-function getEle(){
-  person.value.getEle()
-}
-
+let personList:Persons = [
+  {id: 'as11', name: '张三', age: 18},
+  {id: 'as12', name: '李四', age: 19},
+  {id: 'as13', name: '王五', age: 20}
+]
 
 </script>
 
 <style>
-</style>
+</style>@/type
