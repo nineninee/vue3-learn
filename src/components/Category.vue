@@ -1,8 +1,7 @@
 <template>
 <div class="category">
-  <div>{{ title }}</div>
-  <slot></slot>
-  <slot></slot>
+  <slot name="title">默认标题</slot>
+  <slot name="content">默认内容</slot>
 
 </div>
 </template>
