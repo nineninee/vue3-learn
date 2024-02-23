@@ -2,6 +2,8 @@
 <div class="category">
   <div>{{ title }}</div>
   <slot></slot>
+  <slot></slot>
+
 </div>
 </template>
 <script setup lang='ts'>
